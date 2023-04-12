@@ -1,13 +1,13 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
+// const express = require("express");
+// const app = express();
+// const cors = require("cors");
 const io = require("socket.io")(8900 || process.env.PORT, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://fantastic-youtiao-0251d5.netlify.app",
   },
 });
 
-app.use(cors());
+// app.use(cors());
 let users = [];
 
 const addUser = (userId, socketId) => {
