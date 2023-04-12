@@ -1,9 +1,12 @@
+const app = express();
+const cors = require("cors");
 const io = require("socket.io")(8900 || process.env.PORT, {
   cors: {
     origin: "http://localhost:3000",
   },
 });
 
+app.use(cors());
 let users = [];
 
 const addUser = (userId, socketId) => {
