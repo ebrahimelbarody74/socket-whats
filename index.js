@@ -3,7 +3,7 @@
 // const cors = require("cors");
 const io = require("socket.io")(8900 || process.env.PORT, {
   cors: {
-    origin: "https://fantastic-youtiao-0251d5.netlify.app",
+    origin: "*",
   },
 });
 
